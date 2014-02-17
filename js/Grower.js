@@ -25,7 +25,7 @@ this.cf = this.cf||{};
         this.randomColor = this.colors[Math.floor(Math.random() * this.colors.length)]
         this.Container_initialize();
         this.stage = stage;
-        this.addBranch(0,0,-3.14/2,10);
+        this.addBranch(0,0,-3.14/2,15);
         this.cacheCount = 0;
 
     }

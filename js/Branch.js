@@ -30,13 +30,13 @@ this.cf = this.cf||{};
         this.grower = grower;
         //this.graphics.clear();
         this.graphics.moveTo(0,0);
-        this.graphics.beginStroke("#332b28").setStrokeStyle(this.thickness,"round");
+        this.graphics.beginStroke(ColorLuminance(this.grower.randomColor,-.8)).setStrokeStyle(this.thickness,"round");
 
 
     }
     p.render = function() {
 
-        this.thickness -= 0.3
+        this.thickness -= 0.6
         var graphics = this.graphics;
         var length;
 
@@ -51,16 +51,16 @@ this.cf = this.cf||{};
             //grower.remove(this)     
             
         }
-        if (this.thickness < 1.5){
+        if (this.thickness < 2.5){
             //graphics.clear()
             var index = Math.round(Math.random()*5)
-            this.graphics.beginFill("#332d28")
+            this.graphics.beginFill(ColorLuminance(this.grower.randomColor,-.4))
             this.graphics.setStrokeStyle(0);
             this.graphics.endStroke();
-            this.graphics.drawCircle( -5 + this.xPos + Math.random() * 10, -5 + this.yPos + Math.random() * 10, (Math.random() * 5) + 5)
+            this.graphics.drawCircle( -5 + this.xPos + Math.random() * 10, -5 + this.yPos + Math.random() * 10, (Math.random() * 4) + 4)
 
             remove = true
-            this.angle += Math.PI/180*((Math.random()*30)-15);
+            this.angle += Math.PI/180*((Math.random()*90)-45);
             length = (Math.random()*8)+4
 
             this.oldXPos = this.xPos;
